@@ -1,5 +1,53 @@
 const projects = [
   {
+    id: "synthoid-vr-teleop",
+    stage: "internship",
+    company: "Synthoid",
+    name: "VR 遥操作数据采集系统",
+    type: "七轴机械臂 · 遥操作 · 数据采集",
+    period: "大二暑假",
+    role: "机器人算法实习生",
+    status: "已完成闭环",
+    description: "面向七轴机械臂搭建 VR 遥操作与数据采集系统，负责机械臂运动规划、TRAC-IK 逆运动学求解、轨迹规划与传统控制算法，将操作者输入转换为机械臂可执行的连续运动。",
+    result: "完成从 VR 操作输入、逆运动学求解、轨迹生成和控制执行到机器人数据采集的系统闭环。",
+    image: "assets/project-sentinel.jpg",
+    imageAlt: "机器人机械臂研发视觉示意图",
+    technologies: ["Python", "Linux", "VR Teleoperation", "7-DoF Manipulator", "TRAC-IK", "Inverse Kinematics", "Trajectory Planning", "Classical Control", "Data Collection"],
+    video: null,
+  },
+  {
+    id: "synthoid-isaac-ik-rl",
+    stage: "internship",
+    company: "Synthoid",
+    name: "Isaac 数据增强与轨迹生成",
+    type: "逆运动学 · 数据增强 · MimicGen",
+    period: "大二暑假",
+    role: "机器人算法实习生",
+    status: "探索项目",
+    description: "在 Isaac 仿真环境中探索利用 IK 生成机械臂操作轨迹，为强化学习和操作策略训练制造更多可用数据；围绕轨迹可行性、任务约束与示范扩增开展实验，之后采用 MimicGen 方案进行数据增强。",
+    result: "完成基于 IK 的合成数据探索，之后采用 MimicGen 扩增任务示范并生成策略训练数据。",
+    image: "assets/project-auto-aim.jpg",
+    imageAlt: "机器人仿真与算法研发视觉示意图",
+    technologies: ["Python", "Linux", "Isaac Sim", "MimicGen", "Synthetic Data", "Demonstration Augmentation", "Reinforcement Learning", "Inverse Kinematics", "7-DoF Manipulator"],
+    video: null,
+  },
+  {
+    id: "synthoid-pi05",
+    stage: "internship",
+    company: "Synthoid",
+    name: "PI0.5 真机长程任务部署",
+    type: "VLA · 真机部署 · 长程任务",
+    period: "大二暑假 — 至今",
+    role: "机器人算法实习生",
+    status: "当前进行中",
+    description: "正在 Kai0 框架下开展 PI0.5 的真机部署，面向需要多阶段连续执行的长程操作任务，推进模型接入、机器人执行链路与真实环境任务验证。",
+    result: "项目仍在推进中，当前重点是打通 PI0.5 到真机执行的工程链路并验证长程任务表现。",
+    image: "assets/project-evtol.jpg",
+    imageAlt: "具身智能模型部署视觉示意图",
+    technologies: ["Python", "Linux", "Kai0", "PI0.5", "VLA", "Real-Robot Deployment", "Long-Horizon Tasks"],
+    video: null,
+  },
+  {
     id: "sentinel",
     stage: "undergraduate",
     name: "RoboMaster 哨兵联合决策系统",
@@ -8,11 +56,14 @@ const projects = [
     role: "算法组组长",
     status: "持续开发",
     description: "搭建 Gazebo 哨兵仿真系统，融合激光雷达建图、Mid360 与 AprilTag 定位、点云匹配、自动瞄准和高性能路径规划；在同一 MiniPC 上打通传感器与决策系统。",
+    innovation: "在雷达站项目中，基于 RoboMaster 官方数据集探索离线与在线强化学习策略，并搭建可交互的 2D 强化学习训练环境；将学习策略作为第一层策略接入 Gazebo 哨兵仿真，验证学习型决策与完整机器人系统的结合路径。",
+    next: "计划复现东北大学面向 2026 赛季开源的决策框架，进一步研究大语言模型或多模态大模型、世界模型，以及 SFT、DPO 在机器人决策中的应用。",
     result: "RoboMaster 2025 分区赛一等奖、全国赛二等奖；2026 联盟赛二等奖。",
     loop: ["Gazebo 仿真", "融合定位", "动态障碍预测", "实车部署"],
     image: "assets/project-sentinel.jpg",
     imageAlt: "机器人系统研发视觉示意图",
-    technologies: ["C++", "ROS2", "Linux", "Gazebo", "PCL", "OpenCV", "Kalman Filter", "AprilTag", "MiniPC"],
+    technologies: ["C++", "Python", "ROS2", "Linux", "Gazebo", "PCL", "OpenCV", "Kalman Filter", "AprilTag", "MiniPC", "RoboMaster Dataset", "Offline RL", "Online RL", "Interactive 2D RL Environment", "Hierarchical Policy"],
+    plannedTechnologies: ["Large Language Model", "Multimodal LLM", "World Model", "SFT", "DPO"],
     video: null,
   },
   {
@@ -63,6 +114,36 @@ const projects = [
     technologies: ["C++", "Flight Control", "Path Planning", "SolidWorks", "AutoCAD"],
     video: null,
   },
+  {
+    id: "xunji-car",
+    stage: "highschool",
+    name: "迅即小车",
+    type: "移动机器人 · 小车控制",
+    period: "高中阶段",
+    role: "项目开发",
+    status: "已完成闭环",
+    description: "高中阶段完成的移动小车项目，完成系统搭建、运动控制与整套运行链路的闭环验证。",
+    result: null,
+    image: "assets/project-uav.jpg",
+    imageAlt: "移动机器人项目视觉占位图",
+    technologies: ["Mobile Robot", "Classical Control", "Path Planning"],
+    video: null,
+  },
+  {
+    id: "frc-apriltag-navigation",
+    stage: "highschool",
+    name: "FRC AprilTag 定位导航",
+    type: "视觉定位 · AprilTag · 导航",
+    period: "高中阶段",
+    role: "项目开发",
+    status: "已完成闭环",
+    description: "高中阶段完成的 FRC AprilTag 定位导航项目，打通场地标签识别、机器人视觉定位、位姿解算与导航执行链路。",
+    result: null,
+    image: "assets/project-auto-aim.jpg",
+    imageAlt: "视觉定位与导航项目视觉占位图",
+    technologies: ["FRC", "AprilTag", "Visual Localization", "Navigation", "OpenCV"],
+    video: null,
+  },
 ];
 
 const technologyGroups = [
@@ -79,32 +160,50 @@ const technologyGroups = [
   {
     name: "视觉感知与融合定位",
     summary: "理解环境、目标与机器人位置",
-    skills: ["OpenCV", "PCL", "FAST-LIO2", "YOLOv8", "MobileNet", "AprilTag"],
+    skills: ["OpenCV", "PCL", "FAST-LIO2", "YOLOv8", "MobileNet", "AprilTag", "Visual Localization"],
   },
   {
     name: "规划、控制与解算",
     summary: "将状态转化为稳定动作",
-    skills: ["MPC", "RK45", "EGO-Planner", "Path Planning", "Flight Control"],
+    skills: ["MPC", "RK45", "EGO-Planner", "Path Planning", "Navigation", "Trajectory Planning", "Classical Control", "Flight Control"],
+  },
+  {
+    name: "机械臂运动学与遥操作",
+    summary: "求解、规划并控制机械臂运动",
+    skills: ["7-DoF Manipulator", "TRAC-IK", "Inverse Kinematics", "VR Teleoperation", "Data Collection"],
   },
   {
     name: "强化学习与仿真",
     summary: "训练、评估并复现策略表现",
-    skills: ["PyTorch", "PPO", "Isaac Lab", "Isaac Sim", "PyBullet", "MuJoCo", "Gymnasium", "Gazebo", "TensorBoard"],
+    skills: ["PyTorch", "PPO", "Reinforcement Learning", "Isaac Lab", "Isaac Sim", "PyBullet", "MuJoCo", "Gymnasium", "Gazebo", "TensorBoard"],
+  },
+  {
+    name: "学习型决策",
+    summary: "从比赛数据学习并生成机器人决策",
+    skills: ["RoboMaster Dataset", "Offline RL", "Online RL", "Interactive 2D RL Environment", "Hierarchical Policy", "Large Language Model", "Multimodal LLM", "World Model", "SFT", "DPO"],
+  },
+  {
+    name: "数据生成与增强",
+    summary: "扩增示范轨迹与策略训练数据",
+    skills: ["MimicGen", "Synthetic Data", "Demonstration Augmentation"],
+  },
+  {
+    name: "具身智能与真机部署",
+    summary: "将通用策略接入真实机器人任务",
+    skills: ["Kai0", "PI0.5", "VLA", "Real-Robot Deployment", "Long-Horizon Tasks"],
   },
   {
     name: "部署、硬件与建模",
     summary: "让算法进入真实设备",
-    skills: ["MiniPC", "Jetson Orin", "Livox MID-360", "Hik CS016-UC", "SolidWorks", "Revit", "AutoCAD"],
+    skills: ["MiniPC", "Jetson Orin", "Livox MID-360", "Hik CS016-UC", "Mobile Robot", "FRC", "SolidWorks", "Revit", "AutoCAD"],
   },
 ];
 
-// 后续实习项目只需加入 projects，并将 stage 设置为 "internship"。
 const projectStages = [
   {
     id: "internship",
     name: "实习阶段",
     label: "INDUSTRY PRACTICE",
-    empty: "实习项目资料待补充",
   },
   {
     id: "undergraduate",
@@ -122,6 +221,7 @@ const projectList = document.querySelector("#project-list");
 const projectDetail = document.querySelector("#project-detail");
 const technologyMap = document.querySelector("#technology-map");
 const projectCount = document.querySelector("#project-count");
+const projectRangeLabel = document.querySelector("#project-range-label");
 let activeProjectIndex = 0;
 
 function projectReference(technology) {
@@ -157,7 +257,7 @@ function renderProjectList() {
                         <span class="select-index">P${String(index + 1).padStart(2, "0")}</span>
                         <span class="select-copy">
                           <strong>${project.name}</strong>
-                          <small>${project.role} · ${project.period}</small>
+                          <small>${project.company ? `${project.company} · ` : ""}${project.role} · ${project.period}</small>
                         </span>
                         <i data-lucide="chevron-right" aria-hidden="true"></i>
                       </button>
@@ -179,6 +279,7 @@ function renderProjectDetail() {
     <header class="detail-header">
       <div class="project-meta">
         <span>${stage.name}</span>
+        ${project.company ? `<span>${project.company}</span>` : ""}
         <span>${project.period}</span>
         <span>${project.role}</span>
         <b>${project.status}</b>
@@ -188,7 +289,9 @@ function renderProjectDetail() {
     <h3>${project.name}</h3>
     <p class="project-type">${project.type}</p>
     <p class="detail-description">${project.description}</p>
-    <p class="project-result"><strong>项目结果</strong>${project.result}</p>
+    ${project.innovation ? `<p class="project-note project-innovation"><strong>决策创新</strong>${project.innovation}</p>` : ""}
+    ${project.next ? `<p class="project-note project-next"><strong>下一阶段</strong>${project.next}</p>` : ""}
+    ${project.result ? `<p class="project-result"><strong>项目结果</strong>${project.result}</p>` : ""}
 
     <div class="project-showcase">
       <figure class="project-media">
@@ -210,6 +313,7 @@ function renderProjectDetail() {
 
 function renderTechnologyMap() {
   const activeTechnologies = projects[activeProjectIndex].technologies;
+  const plannedTechnologies = projects[activeProjectIndex].plannedTechnologies || [];
   technologyMap.innerHTML = technologyGroups
     .map(
       (group, groupIndex) => `
@@ -223,13 +327,20 @@ function renderTechnologyMap() {
               .map((technology) => {
                 const references = projectReference(technology);
                 const isActive = activeTechnologies.includes(technology);
-                const title = references.length
-                  ? `用于：${references.map((number) => projects[number - 1].name).join("、")}`
-                  : "简历技术能力，暂未绑定当前展示项目";
+                const isPlanned = plannedTechnologies.includes(technology);
+                const title = isPlanned
+                  ? `当前项目下一阶段计划研究：${technology}`
+                  : references.length
+                    ? `用于：${references.map((number) => projects[number - 1].name).join("、")}`
+                    : "简历技术能力，暂未绑定当前展示项目";
+                const referenceLabel =
+                  references.length > 4
+                    ? `${references.length} 个项目`
+                    : references.map((number) => `P${String(number).padStart(2, "0")}`).join(" · ");
                 return `
-                  <div class="skill-node ${isActive ? "active" : ""}" title="${title}">
+                  <div class="skill-node ${isActive ? "active" : ""} ${isPlanned ? "planned" : ""}" title="${title}">
                     <span>${technology}</span>
-                    <small>${references.map((number) => `P${String(number).padStart(2, "0")}`).join(" · ") || "GENERAL"}</small>
+                    <small>${isPlanned ? "计划" : referenceLabel || "GENERAL"}</small>
                   </div>
                 `;
               })
@@ -308,6 +419,7 @@ function observeReveals() {
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 projectCount.textContent = String(projects.length).padStart(2, "0");
+projectRangeLabel.textContent = `P01—P${String(projects.length).padStart(2, "0")} `;
 setActiveProject(0);
 refreshIcons();
 observeReveals();

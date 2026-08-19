@@ -169,7 +169,7 @@ img {
 .facts dt,
 footer {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0;
   text-transform: uppercase;
 }
@@ -383,7 +383,7 @@ footer {
 .photo-caption p span {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
 }
 
@@ -392,7 +392,7 @@ footer {
   align-items: center;
   gap: 6px;
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .photo-caption a svg {
@@ -447,7 +447,7 @@ footer {
 
 .portfolio-workbench {
   display: grid;
-  grid-template-columns: minmax(290px, 0.34fr) minmax(0, 1fr);
+  grid-template-columns: minmax(340px, 0.38fr) minmax(0, 1fr);
   align-items: stretch;
   margin-top: 64px;
   border: 1px solid var(--ink);
@@ -467,7 +467,7 @@ footer {
   padding: 24px;
   border-bottom: 1px solid #4b4b47;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .rail-title strong {
@@ -477,7 +477,7 @@ footer {
   place-items: center;
   background: var(--coral);
   color: var(--white);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
 }
 
@@ -499,18 +499,18 @@ footer {
 }
 
 .stage-label strong {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .stage-label span,
 .stage-label small {
   color: #83837f;
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 11px;
 }
 
 .stage-label small {
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .stage-empty {
@@ -521,7 +521,7 @@ footer {
   padding: 15px 12px;
   border: 1px dashed #575752;
   color: #8e8e89;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .stage-empty svg {
@@ -566,7 +566,7 @@ footer {
 .select-index {
   padding-top: 2px;
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 11px;
 }
 
 .select-copy {
@@ -576,7 +576,7 @@ footer {
 }
 
 .select-copy strong {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.5;
 }
 
@@ -584,7 +584,7 @@ footer {
   overflow: hidden;
   color: inherit;
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 11px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -608,7 +608,7 @@ footer {
   flex: 0 0 auto;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .project-detail > h3 {
@@ -622,7 +622,7 @@ footer {
   margin: 0 0 24px;
   color: var(--coral);
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
 }
 
@@ -630,8 +630,32 @@ footer {
   max-width: 900px;
   margin: 0;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.9;
+}
+
+.project-note {
+  max-width: 900px;
+  margin: 18px 0 0;
+  padding: 16px 18px;
+  color: #45433f;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.project-note strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--ink);
+}
+
+.project-innovation {
+  background: rgba(157, 233, 220, 0.42);
+}
+
+.project-next {
+  border: 1px dashed var(--line);
+  background: transparent;
 }
 
 .project-detail .project-result {
@@ -640,7 +664,7 @@ footer {
   padding-left: 14px;
   border-left: 2px solid var(--coral);
   color: #45433f;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -671,7 +695,7 @@ footer {
   background: rgba(22, 22, 22, 0.82);
   color: var(--white);
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 11px;
 }
 
 .project-showcase .project-video {
@@ -681,7 +705,7 @@ footer {
 .project-video > small {
   max-width: 190px;
   color: #777773;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.6;
 }
 
@@ -712,7 +736,7 @@ footer {
   max-width: 350px;
   margin: 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -739,18 +763,18 @@ footer {
   padding-top: 4px;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 11px;
 }
 
 .technology-group h4 {
   margin: 0;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .technology-group header p {
   margin: 4px 0 0;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .skill-cloud {
@@ -762,7 +786,7 @@ footer {
 .skill-node {
   display: flex;
   min-width: 0;
-  min-height: 43px;
+  min-height: 50px;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
@@ -776,10 +800,16 @@ footer {
   background: var(--cyan);
 }
 
+.skill-node.planned {
+  border-style: dashed;
+  border-color: var(--coral);
+  background: rgba(255, 92, 53, 0.07);
+}
+
 .skill-node > span {
   overflow: hidden;
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 500;
   text-overflow: ellipsis;
 }
@@ -788,7 +818,7 @@ footer {
   flex: 0 0 auto;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 7px;
+  font-size: 11px;
 }
 
 .filter-label {
@@ -914,7 +944,7 @@ footer {
   background: rgba(22, 22, 22, 0.82);
   color: var(--white);
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .project-video {
@@ -956,7 +986,7 @@ footer {
 .project-video span {
   color: #8e8e89;
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .project-video.has-video {
@@ -1003,7 +1033,7 @@ footer {
   margin-bottom: 14px;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .project-meta b {
@@ -1017,7 +1047,7 @@ footer {
   margin: -2px 0 13px;
   color: var(--coral);
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
 }
 
@@ -1043,7 +1073,7 @@ footer {
 
 .project-loop span {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 500;
 }
 
@@ -1067,7 +1097,7 @@ footer {
   border: 1px solid var(--line);
   border-radius: 2px;
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .stack {
@@ -1121,7 +1151,7 @@ footer {
 .stack-index {
   color: #7c7c77;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .stack-name {
@@ -1142,7 +1172,7 @@ footer {
   border-radius: 2px;
   color: #b6b5b0;
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .engineering-path {
@@ -1183,7 +1213,7 @@ footer {
 .path-steps > li > span {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .path-steps strong {
@@ -1234,7 +1264,7 @@ footer {
   padding: 12px 15px;
   background: var(--yellow);
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .about-copy {
@@ -1509,7 +1539,7 @@ footer {
   }
 
   .photo-caption a {
-    font-size: 8px;
+    font-size: 11px;
   }
 
   .hero-copy {
@@ -1550,6 +1580,12 @@ footer {
   .project-select {
     padding-right: 18px;
     padding-left: 18px;
+  }
+
+  .project-list {
+    max-height: 560px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
 
   .map-heading {
