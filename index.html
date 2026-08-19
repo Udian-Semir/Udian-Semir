@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="俞典的个人主页，展示机器人算法项目、技术栈与从仿真到实机的完整落地经验。"
+    />
+    <meta name="theme-color" content="#f3f0e9" />
+    <title>俞典 | 机器人算法工程师</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="返回首页">YUDIAN<span>.</span></a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#work">项目</a>
+        <a href="#stack">技术栈</a>
+        <a href="#about">关于</a>
+      </nav>
+      <a class="header-contact" href="mailto:2085897081@qq.com">
+        联系我
+        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+      </a>
+      <button class="menu-button" type="button" aria-label="打开菜单" aria-expanded="false">
+        <i data-lucide="menu" aria-hidden="true"></i>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> ROBOTICS ALGORITHM ENGINEER</p>
+          <h1 id="hero-title">俞典</h1>
+          <p class="hero-role">机器人算法工程师</p>
+          <p class="hero-intro">
+            哈尔滨工程大学本科在读，RoboMaster 算法组组长。求职方向为机器人算法工程师，期望城市上海。
+          </p>
+          <dl class="hero-facts">
+            <div><dt>学校</dt><dd>哈尔滨工程大学 · 2024—2028</dd></div>
+            <div><dt>电话</dt><dd><a href="tel:17317231703">173 1723 1703</a></dd></div>
+            <div><dt>邮箱</dt><dd><a href="mailto:2085897081@qq.com">2085897081@qq.com</a></dd></div>
+          </dl>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">
+              查看项目
+              <i data-lucide="arrow-down-right" aria-hidden="true"></i>
+            </a>
+            <a class="button button-secondary" href="https://github.com/Udian-Semir" target="_blank" rel="noreferrer">
+              GitHub · Udian-Semir
+              <i data-lucide="github" aria-hidden="true"></i>
+            </a>
+            <a class="resume-link" href="assets/yudian-resume.pdf" target="_blank">
+              查看简历
+              <i data-lucide="file-text" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" data-delay="1">
+          <img
+            src="assets/profile-yudian.png"
+            alt="俞典的个人照片"
+          />
+          <div class="photo-caption">
+            <p>俞典<br /><span>算法工程师 · 上海</span></p>
+            <a href="https://github.com/Udian-Semir" target="_blank" rel="noreferrer">
+              <i data-lucide="github" aria-hidden="true"></i>
+              Udian-Semir
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="work section" id="work" aria-labelledby="work-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker">01 · SELECTED WORK</p>
+            <h2 id="work-title">项目在左，<br />技术地图<span>在右。</span></h2>
+          </div>
+          <p>
+            选择项目即可查看成果、演示视频位和对应技术；地图按算法职责分类，同一技术在不同项目中的复用关系一目了然。
+          </p>
+        </div>
+
+        <div class="portfolio-workbench reveal">
+          <aside class="project-rail" aria-label="项目列表">
+            <div class="rail-title">
+              <span>PROJECTS</span>
+              <strong id="project-count">04</strong>
+            </div>
+            <div class="project-list" id="project-list"></div>
+          </aside>
+
+          <div class="project-content">
+            <article class="project-detail" id="project-detail" aria-live="polite"></article>
+            <section class="technology-map" id="stack" aria-labelledby="stack-title">
+              <div class="map-heading">
+                <div>
+                  <p class="section-kicker">CAPABILITY MAP</p>
+                  <h3 id="stack-title">技术地图</h3>
+                </div>
+                <p>高亮项为当前项目所用技术；P01—P04 表示它还出现在哪些项目中。</p>
+              </div>
+              <div class="technology-groups" id="technology-map"></div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="about-image reveal">
+          <img
+            src="assets/about-uav.jpg"
+            alt="无人机研发视觉示意图"
+            loading="lazy"
+          />
+          <span>FROM SIM TO REAL.</span>
+        </div>
+
+        <div class="about-copy reveal">
+          <p class="section-kicker">02 · ABOUT</p>
+          <h2 id="about-title">广度服务于系统，<br />深度落在<span>关键算法。</span></h2>
+          <div class="about-text">
+            <p>
+              从高二开始参与机器人与无人机项目，持续接触定位、导航、视觉、自瞄与强化学习。
+              在 RoboMaster 团队担任算法组组长，负责系统架构、核心算法和跨机械、电控方向协作。
+            </p>
+            <p>
+              熟悉 C++、Python、ROS2 与 Linux 机器人开发环境，能够阅读英文论文并将方法转化为可验证、可部署的工程方案。
+            </p>
+          </div>
+          <dl class="facts">
+            <div>
+              <dt>EDUCATION</dt>
+              <dd>哈尔滨工程大学 · 本科 · 2024—2028</dd>
+            </div>
+            <div>
+              <dt>ROLE</dt>
+              <dd>机器人算法工程师</dd>
+            </div>
+            <div>
+              <dt>TARGET</dt>
+              <dd>上海 · 算法工程师</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <p class="section-kicker">03 · CONTACT</p>
+        <h2 id="contact-title">寻找机器人算法方向的<br /><span>实习与工作机会。</span></h2>
+        <a class="contact-email" href="mailto:2085897081@qq.com">
+          2085897081@qq.com
+          <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+        </a>
+        <div class="contact-bottom">
+          <p>俞典 · 20 岁 · 期望城市：上海 · 电话：173 1723 1703</p>
+          <div class="social-links">
+            <a href="https://github.com/Udian-Semir" target="_blank" rel="noreferrer">
+              GitHub <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </a>
+            <a href="#top">回到顶部 <i data-lucide="arrow-up" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> 俞典 / YUDIAN</span>
+      <span>ROBOTICS · ALGORITHM · ENGINEERING</span>
+    </footer>
+
+    <script src="assets/lucide.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
