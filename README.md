@@ -2,7 +2,7 @@
 
 机器人算法工程师，关注状态估计、多传感器融合、运动规划与强化学习。目前就读于哈尔滨工程大学，并在 RoboMaster 团队担任算法组组长。
 
-[查看个人主页](https://udian-semir.github.io/) · [邮件联系](mailto:2085897081@qq.com)
+[查看个人主页](https://udian-semir.github.io/Udian-Semir/) · [邮件联系](mailto:2085897081@qq.com)
 
 ## Focus
 
