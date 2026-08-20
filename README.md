@@ -12,8 +12,6 @@
 <p align="center">
   <a href="https://udian-semir.github.io/Udian-Semir/"><b>个人主页 · Portfolio</b></a>
   &nbsp;·&nbsp;
-  <a href="./assets/yudian-resume.pdf"><b>简历 · CV</b></a>
-  &nbsp;·&nbsp;
   <a href="mailto:2085897081@qq.com"><b>邮箱 · Email</b></a>
 </p>
 
@@ -42,7 +40,7 @@ CURRENT QUEST
 | ID | 项目 · Project | 技术主线 · Focus |
 |:--:|:--|:--|
 | P07 | 垂直起降复合翼无人机 | 姿态控制 · 路径规划 · 避障 |
-| P08 | 迅即小车 | 移动机器人 · 运动控制 |
+| P08 | 寻迹小车 · Line-Following Robot | 移动机器人 · 运动控制 |
 | P09 | FRC AprilTag 定位导航 | AprilTag · 视觉定位 · 导航 |
 
 <p align="center">

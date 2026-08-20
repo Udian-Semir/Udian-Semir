@@ -144,10 +144,10 @@ const projects = [
     video: null,
   },
   {
-    id: "xunji-car",
+    id: "line-following-car",
     stage: "highschool",
-    name: "迅即小车",
-    nameEn: "Xunji Mobile Robot",
+    name: "寻迹小车",
+    nameEn: "Line-Following Robot",
     type: "移动机器人 · 小车控制",
     typeEn: "Mobile Robot · Motion Control",
     period: "高中阶段",
