@@ -239,13 +239,45 @@ const projectStages = [
 const projectList = document.querySelector("#project-list");
 const projectDetail = document.querySelector("#project-detail");
 const technologyMap = document.querySelector("#technology-map");
+const mapProjectFilter = document.querySelector("#map-project-filter");
 const projectCount = document.querySelector("#project-count");
 let activeProjectIndex = 0;
+let mapProjectIndex = null;
 
 function projectReference(technology) {
   return projects
-    .map((project, index) => (project.technologies.includes(technology) ? index + 1 : null))
+    .map((project, index) =>
+      project.technologies.includes(technology) || (project.plannedTechnologies || []).includes(technology) ? index + 1 : null,
+    )
     .filter(Boolean);
+}
+
+function projectTechnologyGroups(project) {
+  const planned = project.plannedTechnologies || [];
+  return technologyGroups
+    .map((group) => ({
+      ...group,
+      skills: group.skills.filter((technology) => project.technologies.includes(technology) || planned.includes(technology)),
+    }))
+    .filter((group) => group.skills.length);
+}
+
+function renderMapProjectFilter() {
+  mapProjectFilter.innerHTML = `
+    <span>项目映射<br /><small>PROJECT MAPPING</small></span>
+    <div>
+      <button class="map-filter-button ${mapProjectIndex === null ? "active" : ""}" type="button" data-map-project="all">全部<br /><small>ALL</small></button>
+      ${projects
+        .map(
+          (project, index) => `
+            <button class="map-filter-button ${mapProjectIndex === index ? "active" : ""}" type="button" data-map-project="${index}" title="${project.name}">
+              P${String(index + 1).padStart(2, "0")}
+            </button>
+          `,
+        )
+        .join("")}
+    </div>
+  `;
 }
 
 function renderProjectList() {
@@ -311,6 +343,26 @@ function renderProjectDetail() {
     <p class="project-type-en">${project.typeEn}</p>
     <p class="detail-description">${project.description}</p>
     <p class="detail-description detail-description-en">${project.descriptionEn}</p>
+    <section class="project-technology-links">
+      <header><strong>对应技术地图</strong><span>Technology Mapping</span></header>
+      <div>
+        ${projectTechnologyGroups(project)
+          .map(
+            (group) => `
+              <section>
+                <h4>${group.name}<small>${group.nameEn}</small></h4>
+                <p>${group.skills
+                  .map(
+                    (technology) =>
+                      `<span class="project-tech-chip ${(project.plannedTechnologies || []).includes(technology) ? "planned" : ""}">${technology}</span>`,
+                  )
+                  .join("")}</p>
+              </section>
+            `,
+          )
+          .join("")}
+      </div>
+    </section>
     ${project.innovation ? `<p class="project-note project-innovation"><strong>决策创新 · Decision Innovation</strong>${project.innovation}<span>${project.innovationEn}</span></p>` : ""}
     ${project.next ? `<p class="project-note project-next"><strong>下一阶段 · Next Stage</strong>${project.next}<span>${project.nextEn}</span></p>` : ""}
 
@@ -335,12 +387,22 @@ function renderTechnologyMap() {
             ${group.skills
               .map((technology) => {
                 const references = projectReference(technology);
+                const isMapped = mapProjectIndex === null || references.includes(mapProjectIndex + 1);
+                const isSelected = mapProjectIndex !== null && references.includes(mapProjectIndex + 1);
                 const title = references.length
                   ? `用于：${references.map((number) => projects[number - 1].name).join("、")}`
                   : "技术内容待补充";
                 return `
-                  <li class="skill-node" title="${title}">
+                  <li class="skill-node ${isSelected ? "active" : ""} ${isMapped ? "" : "muted"}" title="${title}">
                     <span>${technology}</span>
+                    <span class="skill-project-refs">
+                      ${references
+                        .map(
+                          (number) =>
+                            `<button type="button" data-project-reference="${number - 1}" title="${projects[number - 1].name}">P${String(number).padStart(2, "0")}</button>`,
+                        )
+                        .join("") || `<small>待补充</small>`}
+                    </span>
                   </li>
                 `;
               })
@@ -354,8 +416,10 @@ function renderTechnologyMap() {
 
 function setActiveProject(index) {
   activeProjectIndex = index;
+  mapProjectIndex = index;
   renderProjectList();
   renderProjectDetail();
+  renderMapProjectFilter();
   renderTechnologyMap();
   refreshIcons();
 }
@@ -364,6 +428,27 @@ projectList.addEventListener("click", (event) => {
   const button = event.target.closest("[data-project-index]");
   if (!button) return;
   setActiveProject(Number(button.dataset.projectIndex));
+});
+
+mapProjectFilter.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-map-project]");
+  if (!button) return;
+  mapProjectIndex = button.dataset.mapProject === "all" ? null : Number(button.dataset.mapProject);
+  if (mapProjectIndex !== null) {
+    activeProjectIndex = mapProjectIndex;
+    renderProjectList();
+    renderProjectDetail();
+  }
+  renderMapProjectFilter();
+  renderTechnologyMap();
+  refreshIcons();
+});
+
+technologyMap.addEventListener("click", (event) => {
+  const reference = event.target.closest("[data-project-reference]");
+  if (!reference) return;
+  setActiveProject(Number(reference.dataset.projectReference));
+  document.querySelector("#projects").scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
 const menuButton = document.querySelector(".menu-button");
@@ -420,5 +505,8 @@ function observeReveals() {
 document.querySelector("#year").textContent = new Date().getFullYear();
 projectCount.textContent = String(projects.length).padStart(2, "0");
 setActiveProject(0);
+mapProjectIndex = null;
+renderMapProjectFilter();
+renderTechnologyMap();
 refreshIcons();
 observeReveals();

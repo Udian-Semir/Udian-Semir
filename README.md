@@ -18,3 +18,6 @@ Undergraduate at Harbin Engineering University, working on robotics, unmanned sy
 
 个人主页采用纯静态 HTML、CSS 与 JavaScript 构建，通过 GitHub Actions 自动部署。
 This page is built with static HTML, CSS, and JavaScript and deployed through GitHub Actions.
+
+技术地图通过项目编号与项目双向关联，可按项目筛选技术，也可从项目详情反查对应技术分类。页面采用简洁的 Minecraft 像素方块视觉风格。
+The technology map is linked bidirectionally to projects and uses a restrained Minecraft-inspired pixel-block visual style.
