@@ -177,34 +177,44 @@ const projects = [
 
 const technologyGroups = [
   {
-    name: "机器人软件与工程",
-    nameEn: "Robotics Software & Engineering",
-    skills: ["C++", "Python", "ROS2", "Linux", "Docker", "Eigen", "Ceres", "GTSAM"],
+    name: "感知算法",
+    nameEn: "Perception",
+    skills: ["OpenCV", "PCL", "YOLOv8", "MobileNet", "AprilTag"],
   },
   {
-    name: "感知、定位与状态估计",
-    nameEn: "Perception, Localization & State Estimation",
-    skills: ["OpenCV", "PCL", "FAST-LIO2", "YOLOv8", "MobileNet", "AprilTag", "Visual Localization", "Kalman Filter", "ESIKF", "IEKF / PIEKF"],
+    name: "定位与状态估计",
+    nameEn: "Localization & State Estimation",
+    skills: ["Visual Localization", "FAST-LIO2", "Kalman Filter", "ESIKF", "IEKF / PIEKF", "GTSAM", "Ceres", "Eigen"],
   },
   {
-    name: "规划、控制与运动学",
-    nameEn: "Planning, Control & Kinematics",
-    skills: ["MPC", "RK45", "EGO-Planner", "Path Planning", "Navigation", "Trajectory Planning", "Classical Control", "Flight Control", "TRAC-IK", "Inverse Kinematics"],
+    name: "规划与控制算法",
+    nameEn: "Planning & Control",
+    skills: ["Path Planning", "Navigation", "EGO-Planner", "Trajectory Planning", "MPC", "Classical Control", "Flight Control", "RK45"],
   },
   {
-    name: "强化学习与机器人仿真",
-    nameEn: "Reinforcement Learning & Simulation",
-    skills: ["PyTorch", "PPO", "Reinforcement Learning", "Offline RL", "Online RL", "Isaac Lab", "Isaac Sim", "PyBullet", "MuJoCo", "Gymnasium", "Gazebo", "TensorBoard", "Interactive 2D RL Environment"],
+    name: "决策与学习算法",
+    nameEn: "Decision Making & Learning",
+    skills: ["Hierarchical Policy", "Reinforcement Learning", "PPO", "Offline RL", "Online RL", "RoboMaster Dataset", "Interactive 2D RL Environment", "PyTorch", "Large Language Model", "Multimodal LLM", "World Model", "SFT", "DPO"],
   },
   {
-    name: "机械臂、具身智能与数据",
-    nameEn: "Manipulation, Embodied AI & Data",
-    skills: ["7-DoF Manipulator", "VR Teleoperation", "Data Collection", "MimicGen", "Synthetic Data", "Demonstration Augmentation", "Kai0", "PI0.5", "VLA", "Real-Robot Deployment", "Long-Horizon Tasks"],
+    name: "机器人操作与具身智能",
+    nameEn: "Manipulation & Embodied AI",
+    skills: ["7-DoF Manipulator", "Inverse Kinematics", "TRAC-IK", "VR Teleoperation", "Data Collection", "MimicGen", "Synthetic Data", "Demonstration Augmentation", "PI0.5", "VLA", "Long-Horizon Tasks"],
   },
   {
-    name: "学习型决策与系统部署",
-    nameEn: "Learning-Based Decision & Deployment",
-    skills: ["RoboMaster Dataset", "Hierarchical Policy", "Large Language Model", "Multimodal LLM", "World Model", "SFT", "DPO", "MiniPC", "Jetson Orin", "Livox MID-360", "Hik CS016-UC", "Mobile Robot", "FRC", "SolidWorks", "AutoCAD"],
+    name: "系统建模与仿真",
+    nameEn: "Modeling & Simulation",
+    skills: ["Gazebo", "Isaac Sim", "Isaac Lab", "PyBullet", "MuJoCo", "Gymnasium", "TensorBoard", "SolidWorks", "AutoCAD"],
+  },
+  {
+    name: "硬件设备与系统部署",
+    nameEn: "Hardware & System Deployment",
+    skills: ["MiniPC", "Jetson Orin", "Livox MID-360", "Hik CS016-UC", "Real-Robot Deployment", "Kai0", "Mobile Robot", "FRC"],
+  },
+  {
+    name: "机器人软件工程",
+    nameEn: "Robotics Software Engineering",
+    skills: ["C++", "Python", "ROS2", "Linux", "Docker"],
   },
 ];
 
@@ -313,8 +323,6 @@ function renderProjectDetail() {
 }
 
 function renderTechnologyMap() {
-  const activeTechnologies = projects[activeProjectIndex].technologies;
-  const plannedTechnologies = projects[activeProjectIndex].plannedTechnologies || [];
   technologyMap.innerHTML = technologyGroups
     .map(
       (group, groupIndex) => `
@@ -327,15 +335,11 @@ function renderTechnologyMap() {
             ${group.skills
               .map((technology) => {
                 const references = projectReference(technology);
-                const isActive = activeTechnologies.includes(technology);
-                const isPlanned = plannedTechnologies.includes(technology);
-                const title = isPlanned
-                  ? `当前项目下一阶段计划研究：${technology}`
-                  : references.length
-                    ? `用于：${references.map((number) => projects[number - 1].name).join("、")}`
-                    : "简历技术能力，暂未绑定当前展示项目";
+                const title = references.length
+                  ? `用于：${references.map((number) => projects[number - 1].name).join("、")}`
+                  : "技术内容待补充";
                 return `
-                  <li class="skill-node ${isActive ? "active" : ""} ${isPlanned ? "planned" : ""}" title="${title}">
+                  <li class="skill-node" title="${title}">
                     <span>${technology}</span>
                   </li>
                 `;

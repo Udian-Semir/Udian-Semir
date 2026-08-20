@@ -469,7 +469,7 @@ footer {
   display: grid;
   grid-template-columns: minmax(340px, 0.38fr) minmax(0, 1fr);
   align-items: stretch;
-  margin-top: 64px;
+  margin-top: 32px;
   border: 1px solid var(--ink);
   background: var(--white);
 }
@@ -773,7 +773,8 @@ footer {
 
 .technology-map {
   padding: clamp(30px, 4.2vw, 66px);
-  border-top: 1px solid var(--ink);
+  margin-top: 64px;
+  border: 1px solid var(--ink);
   background: var(--paper-deep);
 }
 
@@ -867,18 +868,6 @@ footer {
   height: 1px;
   background: var(--line);
   content: "";
-}
-
-.skill-node.active {
-  border-bottom-color: var(--ink);
-  background: rgba(157, 233, 220, 0.34);
-  font-weight: 700;
-}
-
-.skill-node.planned {
-  border-bottom-style: dashed;
-  border-bottom-color: var(--coral);
-  background: rgba(255, 92, 53, 0.07);
 }
 
 .skill-node > span {

@@ -7,12 +7,14 @@ Undergraduate at Harbin Engineering University, working on robotics, unmanned sy
 
 ## 技术方向 · Technical Directions
 
-- 机器人软件与工程 · Robotics Software & Engineering
-- 感知、定位与状态估计 · Perception, Localization & State Estimation
-- 规划、控制与运动学 · Planning, Control & Kinematics
-- 强化学习与机器人仿真 · Reinforcement Learning & Simulation
-- 机械臂、具身智能与数据 · Manipulation, Embodied AI & Data
-- 学习型决策与系统部署 · Learning-Based Decision & Deployment
+- 感知算法 · Perception
+- 定位与状态估计 · Localization & State Estimation
+- 规划与控制算法 · Planning & Control
+- 决策与学习算法 · Decision Making & Learning
+- 机器人操作与具身智能 · Manipulation & Embodied AI
+- 系统建模与仿真 · Modeling & Simulation
+- 硬件设备与系统部署 · Hardware & System Deployment
+- 机器人软件工程 · Robotics Software Engineering
 
 个人主页采用纯静态 HTML、CSS 与 JavaScript 构建，通过 GitHub Actions 自动部署。
 This page is built with static HTML, CSS, and JavaScript and deployed through GitHub Actions.
