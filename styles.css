@@ -638,6 +638,14 @@ footer {
   line-height: 1.45;
 }
 
+.project-phase {
+  width: fit-content;
+  padding: 3px 6px;
+  border: 1px solid currentColor;
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .select-copy small {
   overflow: hidden;
   color: inherit;
@@ -1300,6 +1308,10 @@ footer {
   background: var(--cyan);
   color: var(--ink);
   font-weight: 500;
+}
+
+.project-meta .detail-phase {
+  background: #e6d878;
 }
 
 .project-meta b small {

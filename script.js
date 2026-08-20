@@ -1,7 +1,9 @@
 const projects = [
   {
     id: "synthoid-vr-teleop",
-    stage: "internship",
+    stage: "undergraduate",
+    phase: "大二实习",
+    phaseEn: "Sophomore Internship",
     company: "Synthoid",
     name: "VR 遥操作数据采集系统",
     nameEn: "VR Teleoperation Data Collection System",
@@ -20,7 +22,9 @@ const projects = [
   },
   {
     id: "synthoid-isaac-ik-rl",
-    stage: "internship",
+    stage: "undergraduate",
+    phase: "大二实习",
+    phaseEn: "Sophomore Internship",
     company: "Synthoid",
     name: "Isaac 数据增强与轨迹生成",
     nameEn: "Isaac Data Augmentation and Trajectory Generation",
@@ -39,7 +43,9 @@ const projects = [
   },
   {
     id: "synthoid-pi05",
-    stage: "internship",
+    stage: "undergraduate",
+    phase: "大二实习",
+    phaseEn: "Sophomore Internship",
     company: "Synthoid",
     name: "PI0.5 真机长程任务部署",
     nameEn: "PI0.5 Long-Horizon Tasks on Real Robots",
@@ -220,11 +226,6 @@ const technologyGroups = [
 
 const projectStages = [
   {
-    id: "internship",
-    name: "实习阶段",
-    label: "Internship",
-  },
-  {
     id: "undergraduate",
     name: "本科阶段",
     label: "Undergraduate",
@@ -308,6 +309,7 @@ function renderProjectList() {
                         <span class="select-copy">
                           <strong>${project.name}</strong>
                           <span class="project-title-en">${project.nameEn}</span>
+                          ${project.phase ? `<span class="project-phase">${project.phase} · ${project.phaseEn}</span>` : ""}
                           <small>${project.company ? `${project.company} · ` : ""}${project.role} · ${project.roleEn} · ${project.period}</small>
                         </span>
                         <i data-lucide="chevron-right" aria-hidden="true"></i>
@@ -330,6 +332,7 @@ function renderProjectDetail() {
     <header class="detail-header">
       <div class="project-meta">
         <span>${stage.name}<br />${stage.label}</span>
+        ${project.phase ? `<b class="detail-phase">${project.phase}<br /><small>${project.phaseEn}</small></b>` : ""}
         ${project.company ? `<span>${project.company}</span>` : ""}
         <span>${project.period}</span>
         <span>${project.role}<br />${project.roleEn}</span>
