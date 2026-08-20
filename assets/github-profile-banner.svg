@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">俞典的 GitHub 个人主页横幅</title>
+  <desc id="desc">Minecraft 风格的机器人与无人系统像素横幅</desc>
+  <defs>
+    <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M16 0H0V16" fill="none" stroke="#213028" stroke-opacity=".18"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="320" fill="#9fd7e8"/>
+  <rect width="1200" height="320" fill="url(#grid)"/>
+  <rect y="248" width="1200" height="24" fill="#5f913d"/>
+  <rect y="272" width="1200" height="48" fill="#845b3d"/>
+  <path d="M0 288h64v16h64v-16h64v16h64v-16h64v16h64v-16h64v16h64v-16h64v16h64v-16h64v16h64v-16h64v16h64v-16h64v16h64v-16h64v16h48" fill="none" stroke="#68462f" stroke-width="8"/>
+  <g transform="translate(70 52)">
+    <rect width="206" height="164" fill="#f5f3e7" stroke="#20261c" stroke-width="8"/>
+    <rect x="16" y="16" width="174" height="132" fill="#63d0b7"/>
+    <path d="M54 128V62h98v66h-30V91H84v37z" fill="#f5f3e7"/>
+    <rect x="92" y="104" width="22" height="24" fill="#63d0b7"/>
+    <rect x="8" y="156" width="190" height="12" fill="#20261c" opacity=".22"/>
+  </g>
+  <g fill="#20261c" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <text x="330" y="90" font-size="24" font-weight="700">YUDIAN / UDIAN-SEMIR</text>
+    <text x="330" y="156" font-size="38" font-weight="800">Robotics &amp; Unmanned Systems</text>
+    <text x="330" y="202" font-size="22">Perception  |  Planning  |  Control  |  Embodied AI</text>
+  </g>
+  <g transform="translate(1080 72) scale(.75)" fill="#20261c">
+    <rect x="32" width="64" height="24"/>
+    <rect x="16" y="24" width="96" height="24"/>
+    <rect y="48" width="128" height="80"/>
+    <rect x="16" y="64" width="32" height="24" fill="#9fd7e8"/>
+    <rect x="80" y="64" width="32" height="24" fill="#9fd7e8"/>
+    <rect x="48" y="96" width="32" height="16" fill="#9fd7e8"/>
+    <rect x="16" y="128" width="32" height="40"/>
+    <rect x="80" y="128" width="32" height="40"/>
+  </g>
+</svg>
